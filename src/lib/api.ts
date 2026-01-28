@@ -74,7 +74,7 @@ const mockData: Record<Route, unknown> = {
     weekLabel: "Week of January 27, 2026",
     phase: 3,
     weeklyContentEngagementOverview: {
-      postsMade: 12,
+      postsMade: 4,
       impressions: 47820,
       engagementTouchpoints: 342,
     },
@@ -115,27 +115,27 @@ const mockData: Record<Route, unknown> = {
     weeks: [
       {
         weekLabel: "Week of January 27, 2026",
-        weeklyContentEngagementOverview: { postsMade: 12, impressions: 47820, engagementTouchpoints: 342 },
+        weeklyContentEngagementOverview: { postsMade: 4, impressions: 47820, engagementTouchpoints: 342 },
         pipelinePreview: { prospectsEngaged: 89, contacted: 54, accepted: 31, replied: 18, callsBooked: 7 },
       },
       {
         weekLabel: "Week of January 20, 2026",
-        weeklyContentEngagementOverview: { postsMade: 10, impressions: 41200, engagementTouchpoints: 298 },
+        weeklyContentEngagementOverview: { postsMade: 5, impressions: 41200, engagementTouchpoints: 298 },
         pipelinePreview: { prospectsEngaged: 77, contacted: 46, accepted: 26, replied: 15, callsBooked: 5 },
       },
       {
         weekLabel: "Week of January 13, 2026",
-        weeklyContentEngagementOverview: { postsMade: 8, impressions: 35600, engagementTouchpoints: 256 },
+        weeklyContentEngagementOverview: { postsMade: 3, impressions: 35600, engagementTouchpoints: 256 },
         pipelinePreview: { prospectsEngaged: 65, contacted: 38, accepted: 22, replied: 12, callsBooked: 4 },
       },
       {
         weekLabel: "Week of January 6, 2026",
-        weeklyContentEngagementOverview: { postsMade: 9, impressions: 32100, engagementTouchpoints: 221 },
+        weeklyContentEngagementOverview: { postsMade: 4, impressions: 32100, engagementTouchpoints: 221 },
         pipelinePreview: { prospectsEngaged: 58, contacted: 34, accepted: 19, replied: 10, callsBooked: 3 },
       },
       {
         weekLabel: "Week of December 30, 2025",
-        weeklyContentEngagementOverview: { postsMade: 6, impressions: 28400, engagementTouchpoints: 187 },
+        weeklyContentEngagementOverview: { postsMade: 2, impressions: 28400, engagementTouchpoints: 187 },
         pipelinePreview: { prospectsEngaged: 52, contacted: 29, accepted: 16, replied: 8, callsBooked: 2 },
       },
     ],
