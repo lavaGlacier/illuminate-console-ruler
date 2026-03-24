@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Illuminate Client Console
 
-## Project info
+**Live:** [preview--illuminate-console-ruler.lovable.app](https://preview--illuminate-console-ruler.lovable.app)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A client-facing reporting dashboard for Illuminate Global's B2B LinkedIn growth campaigns. Clients log in and see exactly where their campaign stands - weekly performance numbers, pipeline progression, phase status, and historical check-ins. No email reports, no manual updates, no waiting.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Screens
 
-**Use Lovable**
+**Weekly Brief** - the homepage. Shows the current week's content and engagement overview (posts made, impressions, engagement touchpoints) alongside a live pipeline snapshot (prospects engaged, contacted, accepted, replied, calls booked). A phase progress indicator shows where the client sits in the 4-phase workflow.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**Pipeline Preview** - a stepped funnel view of the outreach pipeline. Each stage shows the current count alongside a weekly delta (e.g. +12 this week), so clients can see momentum at every stage from first engagement to booked call.
 
-Changes made via Lovable will be committed automatically to this repo.
+**Phase Map** - a visual of the 4-phase Illuminate workflow (Offer Building, Profile Optimization, Content + Engagement, Engagement + Outbound), with each phase marked as Complete, Current, or upcoming. Clients always know what phase they're in and what's next.
 
-**Use your preferred IDE**
+**Weekly Check-ins** - historical performance by week, expandable per week. Clients can scroll back through every week of their engagement and see both content metrics and pipeline numbers in one place.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## How data flows
 
-Follow these steps:
+Campaign data lives in Google Sheets (managed by the Illuminate team). The dashboard reads from Sheets via the backend integration and renders it for the client in real time. No manual copy-paste, no static PDFs - the client console stays current as the team updates the sheet.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+> Note: Google Sheets integration is built and wired up. Currently running on mock data while final connection is being completed.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Tech stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+| Layer | Technology |
+|---|---|
+| Frontend | React + TypeScript + Vite |
+| UI | shadcn/ui + Tailwind CSS |
+| Data source | Google Sheets (via backend integration) |
+| Testing | Vitest |
+| Deployment | Lovable / Netlify |
+
+---
+
+## Local setup
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/lavaGlacier/illuminate-console-ruler.git
+cd illuminate-console-ruler
+
+# 2. Install dependencies
+npm install
+
+# 3. Add environment variables
+cp .env.example .env
+# Add your Google Sheets API credentials and sheet ID
+
+# 4. Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+App runs at `http://localhost:8080` by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Roadmap
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- [ ] Complete Google Sheets live data connection
+- [ ] Per-client authentication (each client sees only their data)
+- [ ] Email digest - weekly summary sent automatically from dashboard data
+- [ ] Mobile-optimised layout
+- [ ] Exportable weekly report PDF
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## Built by
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+[Sparsh Agarwal](https://www.linkedin.com/in/sparsh-illuminate/) - [illuminate.global](https://illuminate.global)
